@@ -5,9 +5,10 @@ const Users = ({usersList}) => {
   return (
     <>
       <div className={styles.list}>
+        
         <ul>
         {usersList.map((user) => {
-           return <li key={user.id}>{user.name}</li>
+           return <li key={user.id}>{user.first_name + " " + user.last_name}</li>
         })}
         </ul>
       </div>
