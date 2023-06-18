@@ -1,6 +1,7 @@
-import { useEffect, useState} from 'react';
+import { useEffect, useState, useRef} from 'react';
 import React from 'react';
 import Navbar from './components/navbar/Navbar';
+import Home from './components/Home';
 import Users from './components/users/Users';
 import axios from 'axios';
 import HashLoader from "react-spinners/HashLoader";
@@ -22,7 +23,7 @@ const fetchData = async () => {
     try {
         const response = await axios.get("https://reqres.in/api/users?page=1");
         setUsersList(response.data.data);
-    }catch (error) {
+    } catch (error) {
         console.log(error);
     }
 };
@@ -36,15 +37,19 @@ const handleFetchData = () => {
 console.log(usersList)
   return (
     <>
-     <Navbar onFetchData={handleFetchData}/>
-     {isButtonClicked && <Users usersList={usersList}/>}
-     <HashLoader
-        color="#36d7b7"
-        loading={loading}
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
+     <Navbar onFetchData={handleFetchData} clicked={isButtonClicked}/>
+     <div className="container">
+     {isButtonClicked ? <Users usersList={usersList}/> : <Home />}
+     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '10%'}}>
+        <HashLoader
+          color="#a697ce"
+          loading={loading}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </div>
+      </div>
     </>
   )
 }

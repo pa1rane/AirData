@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: #242526;
+    
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.btn{
+    padding: 5px;
+    background-color: #a697ce;
+    border: 2px solid hsla(180, 1%, 54%, 0.2);
+    border-radius: 4px;
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 1px 2px 2px hsla(180, 2%, 12%, 0.2),
+    2px 4px 4px  hsla(180, 2%, 12%, 0.2),
+    4px 8px 8px hsla(180, 2%, 12%, 0.2),
+    8px 16px 16px  hsla(180, 2%, 12%, 0.2),
+    16px 32px 32px  hsla(180, 2%, 12%, 0.2),
+}

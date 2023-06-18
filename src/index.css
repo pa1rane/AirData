@@ -1,1 +1,13 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+   font-family: monospace, sans-serif;
+   overflow: hidden;
+}
 
+.container{
+   height: 100vh;
+   background-color: #414360;
+   background-image: linear-gradient(62deg, #414360 0%, #585b82 100%);
+}

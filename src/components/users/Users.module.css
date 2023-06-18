@@ -1,0 +1,34 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 50px; 
+    justify-items: center; 
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+  
+  }
+
+  .avatar{
+    width: 250px;
+    height: 220px;
+    padding-bottom: 5px;
+  }
+
+  .name{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .email{
+    font-size: 12px;
+    opacity: 70%;
+  }
+

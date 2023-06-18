@@ -5,13 +5,14 @@ const Users = ({usersList}) => {
   return (
     <>
       <div className={styles.list}>
-        
-        <ul>
         {usersList.map((user) => {
-           return <li key={user.id}>{user.first_name + " " + user.last_name}</li>
+           return <div className={styles.user} key={user.id}>
+            <img className ={styles.avatar} src={user.avatar} alt={user.first_name + " " + user.last_name} />
+            <p className={styles.name}>{user.first_name + " " + user.last_name}</p>
+            <p className={styles.email}>{user.email}</p>
+           </div>
         })}
-        </ul>
-      </div>
+        </div>
     </>
   )
 }

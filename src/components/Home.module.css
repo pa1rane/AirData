@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10%;
+}
+
+.heading{
+    font-size: 25px;
+    color: #a697ce;
+}
+
+.suggetion{
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+}
